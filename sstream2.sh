@@ -16,6 +16,5 @@ function snap {
 count=$((60/2))
 for (( i=2; i <= $count; i++ )); do
   snap
-  latest
   sleep 2
 done

@@ -11,6 +11,6 @@ for singleFile in $files; do
   ((counter++))
 done
 
-ffmpeg -framerate 30 -i $dir/_tmp_%05d.jpeg $dir/stue_all_$date.mp4
+ffmpeg -framerate 30 -i $dir/_tmp_%05d.jpeg $dir/v/stue_all_$date.mp4
 
 rm -f $dir/_tmp_*
