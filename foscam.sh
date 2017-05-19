@@ -12,7 +12,7 @@ function snap {
   dateVal=`date +%Y-%m-%d:%H:%M:%S`
   file="foscam_$dateVal.jpg"
   curl -o $dir/$file "http://10.0.1.2:88/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=admin&pwd=password"
-  convert $dir/$file -fill white  -undercolor '#00000080'  -gravity South -annotate +0+5 "$dateVal" $dir/$file
+  convert $dir/$file -fill white -resize 640x400 -undercolor '#00000080'  -gravity South -annotate +0+5 "$dateVal" $dir/$file
   latest
 }
 
